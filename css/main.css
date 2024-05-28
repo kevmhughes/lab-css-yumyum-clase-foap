@@ -1,0 +1,57 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #FA7343;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Intro', sans-serif;
+    font-weight: 900;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    color: var(--primary);
+}
+
+.description {
+    color: #9ea0a5;
+}
+
+.nav-mobile img {
+    width: 32px;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+/** Cuando el viewport sea de al menos 768px, muestra el menú de desktop, y oculta el menú móvil */
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}

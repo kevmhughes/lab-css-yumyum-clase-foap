@@ -20,6 +20,7 @@ h5,
 h6 {
     font-family: 'Intro', sans-serif;
     font-weight: 900;
+
 }
 
 
@@ -29,7 +30,7 @@ nav {
     justify-content: space-around;
 }
 
-.title {
+.title, h2 {
     color: var(--primary);
 }
 
@@ -45,6 +46,45 @@ nav {
     display: none;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section img {
+    height: 60px;
+}
+
+.container-steps {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.container-steps-right-side{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.number-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.desktop-container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    max-width: 80%
+}
+
+
 /** Cuando el viewport sea de al menos 768px, muestra el menú de desktop, y oculta el menú móvil */
 @media (min-width: 768px) {
     .desktop-menu {
@@ -54,4 +94,14 @@ nav {
     .nav-mobile {
         display: none;
     }
+
+    section {
+        flex-direction: column;
+    }
+
+    .desktop-container {
+        display: flex;
+        flex-direction: row;
+    }
+
 }
